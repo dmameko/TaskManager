@@ -1,0 +1,74 @@
+@import '../../../assets/styles/variables';
+
+.login {
+  height: 100%;
+  width: 100%;
+  background-color: $app-bg-black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__heading {
+    margin: 0 0 16px 0;
+    color: $app-white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    line-height: 18px;
+  }
+
+  &-form {
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: start;
+    justify-content: start;
+
+    &__block {
+      width: 100%;
+    }
+
+    &__field {
+      width: 100%;
+      box-sizing: border-box;
+      height: 44px;
+      border-radius: 4px;
+      background-color: $app-field-bg;
+      border: 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+      color: $app-field-color;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      padding-left: 8px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+      &::placeholder {
+        color: $app-field-placeholder;
+      }
+    }
+
+    &__button {
+      height: 44px;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $app-white;
+      font-size: 16px;
+      font-weight: 400;
+      background: linear-gradient(to right, #78cfb0, #9E78CF);
+      border: 0;
+      border-radius: 4px;
+
+      &[disabled] {
+        opacity: 0.7;
+      }
+    }
+  }
+}
