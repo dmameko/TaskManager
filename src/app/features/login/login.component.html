@@ -1,0 +1,24 @@
+<div class="login">
+  <h1 class="login__heading">Login</h1>
+  <form class="login-form" [formGroup]="formGroup">
+    <div class="login-form__block">
+      <input
+        type="text"
+        class="login-form__field"
+        formControlName="email"
+        placeholder="Email Address"/>
+    </div>
+    <div class="login-form__block">
+      <input
+        type="password"
+        class="login-form__field"
+        formControlName="password"
+        placeholder="Password"/>
+    </div>
+    <button
+      type="submit"
+      class="login-form__button"
+      [disabled]="formGroup.invalid"
+      (click)="submit()">Login</button>
+  </form>
+</div>
