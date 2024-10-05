@@ -1,0 +1,25 @@
+<div class="list">
+  <div class="list-search">
+    <input
+      type="text"
+      class="list-search__field"
+      placeholder="Add a new task"/>
+    <button class="list-search__button" (click)="add()">
+      <img src="assets/images/add.svg" alt="Add" />
+    </button>
+  </div>
+  <div class="list__wrapper">
+    <div class="list_todo">
+      <h4 class="list__heading">Tasks to do - {{ activeItems.length }}</h4>
+      @for (item of activeItems; track item.title) {
+        <app-todo-item [todoItem]="item"></app-todo-item>
+      }
+    </div>
+    <div class="list_done">
+      <h4 class="list__heading">Done - {{ doneItems.length }}</h4>
+      @for (item of doneItems; track item.title) {
+        <app-todo-item [todoItem]="item"></app-todo-item>
+      }
+    </div>
+  </div>
+</div>
