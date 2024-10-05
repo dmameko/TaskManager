@@ -1,0 +1,67 @@
+@import '../../../assets/styles/variables';
+
+:host {
+  background-color: $app-bg-black;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  padding: 20px 16px;
+  box-sizing: border-box;
+}
+
+.list {
+  max-width: 432px;
+  width: 100%;
+
+  &-search {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &__field {
+      width: calc(100% - 48px);
+      height: 40px;
+      background-color: transparent;
+      border: 1px solid $app-purple-border;
+      color: $app-grey;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: Arial, Helvetica, sans-serif;
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding-left: 8px;
+
+      &::placeholder {
+        padding-left: 8px;
+      }
+    }
+
+    &__button {
+      width: 40px;
+      height: 40px;
+      background-color: $app-purple;
+      color: $app-white;
+      border-radius: 4px;
+      border: 0;
+    }
+  }
+
+  &__heading {
+    color: $app-white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    margin: 0 0 12px 0;
+  }
+
+  &__wrapper {
+    height: calc(100% - 100px);
+    overflow: auto;
+  }
+}

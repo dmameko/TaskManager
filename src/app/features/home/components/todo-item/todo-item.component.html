@@ -1,0 +1,21 @@
+@if (todoItem) {
+  <div class="item">
+    <p class="item__title">{{ todoItem.title }}</p>
+    @if (todoItem.active) {
+      <div class="item-buttons">
+        <button
+          class="item-buttons__icon"
+          (click)="doneItem()">
+          <img src="assets/images/active.svg" alt="Active"/>
+        </button>
+        <button
+          class="item-buttons__icon"
+          [disabled]="todoItem.readonly"
+          (click)="deleteItem()"
+        >
+          <img src="assets/images/clear.svg" alt="Clear"/>
+        </button>
+      </div>
+    }
+  </div>
+}
