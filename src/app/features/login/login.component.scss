@@ -62,12 +62,51 @@
       color: $app-white;
       font-size: 16px;
       font-weight: 400;
-      background: linear-gradient(to right, #78cfb0, #9E78CF);
+      background: linear-gradient(to right, $app-green, $app-purple);
       border: 0;
       border-radius: 4px;
+      cursor: pointer;
 
       &[disabled] {
         opacity: 0.7;
+        cursor: default;
+      }
+    }
+
+    &__hint {
+      color: $app-green;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 14px;
+      margin: 12px 0;
+    }
+
+    &_register {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__text {
+      color: $app-purple;
+      font-weight: 400;
+      font-size: 14px;
+      margin: 12px 0;
+    }
+
+    &__link {
+      color: $app-purple;
+      font-weight: 400;
+      font-size: 14px;
+      margin: 12px 0 12px 8px;
+
+      &:hover {
+        background: linear-gradient(to right, $app-green, $app-purple);
+        background-clip: text;
+        color: transparent;
+        font-size: 600;
+        cursor: pointer;
       }
     }
   }
