@@ -6,7 +6,7 @@ import { AuthService } from "../../core/services/auth.service";
 import { ActivatedRoute, Router } from "@angular/router";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
-import { catchError, of, take } from "rxjs";
+import { take } from "rxjs";
 
 @Component({
   standalone: true,
