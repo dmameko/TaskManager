@@ -35,9 +35,14 @@
       background-color: transparent;
       color: $app-purple;
       border: 0;
+      cursor: pointer;
 
       &[disabled] {
         opacity: 0.5;
+      }
+
+      &:hover {
+        opacity: 0.6;
       }
     }
   }

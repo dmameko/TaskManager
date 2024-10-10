@@ -1,0 +1,13 @@
+<div class="dialog">
+  <header class="dialog__header">
+    {{ data === 'add' ? 'Add' : 'Edit' }}
+  </header>
+  <div class="dialog__content">
+    <label class="dialog__label">Todo Title</label>
+    <input class="dialog__field" [(ngModel)]="title"/>
+  </div>
+  <footer class="dialog__footer">
+    <button class="dialog__button dialog__button_cancel" (click)="cancel()">Cancel</button>
+    <button class="dialog__button dialog__button_add" (click)="submit()">{{ data === 'add' ? 'Add' : 'Edit' }}</button>
+  </footer>
+</div>
