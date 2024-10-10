@@ -28,8 +28,6 @@ export class AuthService {
     return this._http.post(`${this.baseUrl}/auth/register`, { username, password }).pipe(
       take(1),
       tap((response: any) => {
-        console.log(response);
-
         if (response.token) {
           localStorage.setItem('token', response.token);
         }
@@ -39,6 +37,6 @@ export class AuthService {
 
   public logout() {
     localStorage.removeItem('token');
-    this._router.navigate(['/', 'login']);
+    window.location.reload();
   }
 }

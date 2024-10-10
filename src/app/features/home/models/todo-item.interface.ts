@@ -1,6 +1,5 @@
 export interface TodoItem {
-  id: number;
+  _id: string;
   title: string;
   active: boolean;
-  readonly: boolean;
 }

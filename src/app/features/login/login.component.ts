@@ -53,10 +53,6 @@ export class LoginComponent implements OnInit {
         this.formGroup.get('password')?.value,
       ).pipe(
         take(1),
-        catchError(err => {
-          console.log(err);
-          return of(null);
-        }),
       ).subscribe(response => {
         if (response) {
           this._router.navigate(['/', 'home']);
@@ -68,10 +64,6 @@ export class LoginComponent implements OnInit {
         this.formGroup.get('password')?.value,
       ).pipe(
         take(1),
-        catchError(err => {
-          console.log(err);
-          return of(null); // Prevent further propagation of the error
-        }),
       ).subscribe(response => {
         if (response) {
           this._router.navigate(['/', 'home']);
